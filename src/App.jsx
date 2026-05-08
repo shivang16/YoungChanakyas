@@ -8,7 +8,7 @@ import { Contact } from 'lucide-react';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/YoungChanakyas">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
