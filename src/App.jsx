@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Landing from './pages/Landing';
-// import About from './pages/About';
-// import Schedule from './pages/Schedule';
-// import Pricing from './pages/Pricing';
+import About from './pages/About';
+import ContactUs from './pages/Contact';
 import Registration from './pages/Registration';
+import { Contact } from 'lucide-react';
 
 export default function App() {
   return (
@@ -12,10 +12,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
-          {/* <Route path="about" element={<About />} />
-          <Route path="schedule" element={<Schedule />} />
-          <Route path="pricing" element={<Pricing />} /> */}
+          <Route path="about" element={<About />} />
           <Route path="register" element={<Registration />} />
+          <Route path="contact" element={<ContactUs />} />
         </Route>
       </Routes>
     </BrowserRouter>

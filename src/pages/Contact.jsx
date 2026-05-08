@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-export default function About() {
+export default function Contact() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-20 flex flex-col items-center text-center">
       <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-6">
-        This is about us page.. <span className="text-blue-600">Thinkers</span>
+        This is contact page.. <span className="text-blue-600">Thinkers</span>
       </h1>
       <p className="text-xl text-gray-600 max-w-2xl mb-10">
         YoungChanakyas provides world-class mentorship and curriculum designed to build leadership, strategic thinking, and core technical skills.
