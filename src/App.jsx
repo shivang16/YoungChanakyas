@@ -4,7 +4,6 @@ import Landing from './pages/Landing';
 import About from './pages/About';
 import ContactUs from './pages/Contact';
 import Registration from './pages/Registration';
-import { Contact } from 'lucide-react';
 
 export default function App() {
   return (
