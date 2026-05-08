@@ -28,15 +28,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      
+      # 1. Swap Jekyll for Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          source: ./
-          destination: ./_site
+          node-version: 20
+          cache: 'npm'
+          
+      # 2. Install dependencies
+      - name: Install dependencies
+        run: npm ci
+        
+      # 3. Compile the React app
+      - name: Build with Vite
+        run: npm run build
+        
+      # 4. Upload ONLY the compiled output folder
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
 
   # Deployment job
   deploy:
